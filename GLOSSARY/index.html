@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgIncentives Glossary</title>
+    <!-- Standard Clean Corporate Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="layout-wrapper">
+        <!-- Sidebar Navigation for terms -->
+        <aside class="sidebar">
+            <h3 class="sidebar-title">Terms Index</h3>
+            <div class="sidebar-list" id="termIndexList">
+                <!-- Sidebar links injected by app.js -->
+            </div>
+        </aside>
+
+        <main class="glossary-main">
+            <div class="glossary-container">
+                <header class="glossary-header">
+                    <h1>Glossary of Terms</h1>
+                    <div class="search-wrapper">
+                        <input type="text" id="searchInput" placeholder="Search by term, context, or source...">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </div>
+                    
+                    <div class="alphabet-nav" id="alphabetNav">
+                        <!-- Alphabet buttons injected by app.js -->
+                    </div>
+
+                    <p id="resultCount" class="result-count"></p>
+                </header>
+
+                <div class="glossary-list" id="glossaryList">
+                    <!-- Items injected by app.js -->
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
