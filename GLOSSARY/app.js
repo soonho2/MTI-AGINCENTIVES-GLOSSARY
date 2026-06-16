@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const termIndexList = document.getElementById('termIndexList');
 
     let terms = [];
-    let currentLetterFilter = null;
+    let currentLetterFilter = 'A';
     let currentSearchQuery = '';
 
     // CSV Parser function
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const sortedLetters = Array.from(letters).sort();
         
         const allBtn = document.createElement('button');
-        allBtn.className = 'alpha-btn active';
+        allBtn.className = currentLetterFilter === null ? 'alpha-btn active' : 'alpha-btn';
         allBtn.textContent = 'All';
         allBtn.addEventListener('click', () => {
             currentLetterFilter = null;
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         sortedLetters.forEach(letter => {
             const btn = document.createElement('button');
-            btn.className = 'alpha-btn';
+            btn.className = currentLetterFilter === letter ? 'alpha-btn active' : 'alpha-btn';
             btn.textContent = letter;
             btn.addEventListener('click', () => {
                 currentLetterFilter = letter;
